@@ -7,3 +7,13 @@ This repository aims to provide data of COVID-19 cases in readable format for sc
 
 ## Format
 All data are saved in tab-separated value (.tsv).
+
+## Example script
+```python
+import pandas as pd
+import numpy as np
+
+path = 'https://raw.githubusercontent.com/srifqi/covid19-data/master/'
+csv_ = pd.read_csv(path + 'nation/ID.tsv', '\t')
+data = np.array(csv_)
+```
